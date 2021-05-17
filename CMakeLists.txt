@@ -84,6 +84,8 @@ set(RENDER_SOURCES
     src/mesh.h
     src/osutils.h 
     src/osutils.cpp 
+    src/skybox.h 
+    src/skybox.cpp
     )
 
 set(PSYS_SOURCES 
@@ -111,5 +113,8 @@ target_link_libraries(confetti ${CORE})
 
 add_executable(demo src/main-demo.cpp ${PSYS_SOURCES} ${RENDER_SOURCES} ${SHADERS})
 target_link_libraries(demo ${CORE})
+
+add_executable(scene src/main-scene.cpp ${RENDER_SOURCES} ${SHADERS})
+target_link_libraries(scene ${CORE})
 
 

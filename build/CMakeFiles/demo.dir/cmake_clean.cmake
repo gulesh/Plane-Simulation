@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/demo.dir/src/osutils.cpp.o"
   "CMakeFiles/demo.dir/src/particlesystem.cpp.o"
   "CMakeFiles/demo.dir/src/renderer.cpp.o"
+  "CMakeFiles/demo.dir/src/skybox.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

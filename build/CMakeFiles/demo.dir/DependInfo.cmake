@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/gulesh_shukla/cs312/Plane_Contrails/src/osutils.cpp" "/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/demo.dir/src/osutils.cpp.o"
   "/Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp" "/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/demo.dir/src/particlesystem.cpp.o"
   "/Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.cpp" "/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/demo.dir/src/renderer.cpp.o"
+  "/Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.cpp" "/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/demo.dir/src/skybox.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

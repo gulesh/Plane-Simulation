@@ -763,3 +763,9 @@ CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/image.h
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/renderer.h
 
+CMakeFiles/confetti.dir/src/skybox.cpp.o: ../external/include/GL/glew.h
+CMakeFiles/confetti.dir/src/skybox.cpp.o: ../external/include/GLFW/glfw3.h
+CMakeFiles/confetti.dir/src/skybox.cpp.o: ../src/AGL.h
+CMakeFiles/confetti.dir/src/skybox.cpp.o: ../src/skybox.cpp
+CMakeFiles/confetti.dir/src/skybox.cpp.o: ../src/skybox.h
+

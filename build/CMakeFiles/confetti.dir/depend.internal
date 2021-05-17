@@ -763,3 +763,9 @@ CMakeFiles/confetti.dir/src/renderer.cpp.o
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/image.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.cpp
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h
+CMakeFiles/confetti.dir/src/skybox.cpp.o
+ ../external/include/GL/glew.h
+ ../external/include/GLFW/glfw3.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGL.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.cpp
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.h

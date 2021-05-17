@@ -462,3 +462,9 @@ CMakeFiles/billboard.dir/src/renderer.cpp.o: ../src/image.h
 CMakeFiles/billboard.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/billboard.dir/src/renderer.cpp.o: ../src/renderer.h
 
+CMakeFiles/billboard.dir/src/skybox.cpp.o: ../external/include/GL/glew.h
+CMakeFiles/billboard.dir/src/skybox.cpp.o: ../external/include/GLFW/glfw3.h
+CMakeFiles/billboard.dir/src/skybox.cpp.o: ../src/AGL.h
+CMakeFiles/billboard.dir/src/skybox.cpp.o: ../src/skybox.cpp
+CMakeFiles/billboard.dir/src/skybox.cpp.o: ../src/skybox.h
+

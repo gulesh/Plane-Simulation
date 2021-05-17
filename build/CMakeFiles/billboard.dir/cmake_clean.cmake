@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/billboard.dir/src/mesh.cpp.o"
   "CMakeFiles/billboard.dir/src/osutils.cpp.o"
   "CMakeFiles/billboard.dir/src/renderer.cpp.o"
+  "CMakeFiles/billboard.dir/src/skybox.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

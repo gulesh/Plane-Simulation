@@ -763,3 +763,9 @@ CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/image.h
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/renderer.h
 
+CMakeFiles/demo.dir/src/skybox.cpp.o: ../external/include/GL/glew.h
+CMakeFiles/demo.dir/src/skybox.cpp.o: ../external/include/GLFW/glfw3.h
+CMakeFiles/demo.dir/src/skybox.cpp.o: ../src/AGL.h
+CMakeFiles/demo.dir/src/skybox.cpp.o: ../src/skybox.cpp
+CMakeFiles/demo.dir/src/skybox.cpp.o: ../src/skybox.h
+
