@@ -67,12 +67,12 @@ bool Mesh::loadPLY(const std::string &filename)
    // getline(file, value);
    int attributeNum = 0;
    string facesNum;
-   
+
    //skipping three lines
    while (value != "end_header")
    {
       getline(file, value); //skipping ascii
-      if(value.substr(0, 13) == "element face ")
+      if (value.substr(0, 13) == "element face ")
       {
          facesNum = value.substr(13);
       }
@@ -84,7 +84,6 @@ bool Mesh::loadPLY(const std::string &filename)
    // cout << attributeNum << endl;
    meshTextures = new float[attributeNum * verticesNum]; //texture buffer
 
-
    trianglesNum = stoi(facesNum);
    cout << "traingles num: " << trianglesNum << endl;
    meshIndices = new unsigned int[3 * trianglesNum];
@@ -92,7 +91,6 @@ bool Mesh::loadPLY(const std::string &filename)
    // //skipping two more lines
    // getline(file, value);
    // getline(file, value);
-   
 
    if (attributeNum > 0)
    {
@@ -148,17 +146,16 @@ bool Mesh::loadPLY(const std::string &filename)
          meshNormals[indexN + 2] = num;
          indexN = indexN + 3;
 
-         while(attributeNum > 0)
+         while (attributeNum > 0)
          {
             file >> num;
             meshTextures[indexT] = num;
             indexT++;
             attributeNum--;
          }
-         
+
          i++;
       }
-      
    }
    else
    {
@@ -211,7 +208,7 @@ bool Mesh::loadPLY(const std::string &filename)
          file >> num;
          meshNormals[indexN + 2] = num;
          indexN = indexN + 3;
-         
+
          i++;
       }
    }
@@ -275,3 +272,66 @@ unsigned int *Mesh::indices() const
 {
    return meshIndices;
 }
+
+void Mesh::initBuffer()
+{
+   if (meshIndices == nullptr || meshPositions == nullptr || meshNormals == nullptr)
+      return;
+
+   glGenBuffers(1, &mIndicesId);
+   //  buffers.push_back(indexBuf);
+   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mIndicesId);
+   glBufferData(GL_ELEMENT_ARRAY_BUFFER, trianglesNum * 3 * sizeof(unsigned int), meshIndices, GL_STATIC_DRAW);
+
+   glGenBuffers(1, &mPosId);
+   //  buffers.push_back(mIndicesId);
+   glBindBuffer(GL_ARRAY_BUFFER, mPosId);
+   glBufferData(GL_ARRAY_BUFFER, verticesNum * sizeof(float), meshPositions, GL_STATIC_DRAW);
+
+   glGenBuffers(1, &mNormalId);
+   //  buffers.push_back(mNormalId);
+   glBindBuffer(GL_ARRAY_BUFFER, mNormalId);
+   glBufferData(GL_ARRAY_BUFFER, verticesNum * sizeof(float), meshNormals, GL_STATIC_DRAW);
+
+   if (meshTextures != nullptr)
+   {
+      glGenBuffers(1, &mTextureId);
+      //   buffers.push_back(mTextureId);
+      glBindBuffer(GL_ARRAY_BUFFER, mTextureId);
+      glBufferData(GL_ARRAY_BUFFER, verticesNum * sizeof(float), meshTextures, GL_STATIC_DRAW);
+   }
+
+   glGenVertexArrays(1, &mVaoId);
+   glBindVertexArray(mVaoId);
+
+   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mIndicesId);
+
+   // Position
+   glBindBuffer(GL_ARRAY_BUFFER, mPosId);
+   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+   glEnableVertexAttribArray(0); // Vertex position
+
+   // Normal
+   glBindBuffer(GL_ARRAY_BUFFER, mNormalId);
+   glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, 0);
+   glEnableVertexAttribArray(1); // Normal
+
+   // Tex coords
+   if (meshTextures != nullptr)
+   {
+      glBindBuffer(GL_ARRAY_BUFFER, mTextureId);
+      glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, 0);
+      glEnableVertexAttribArray(2); // Tex coord
+   }
+
+   glBindVertexArray(0);
+}
+
+void Mesh::renderer() const {
+    if(mVaoId == 0) return;
+
+    glBindVertexArray(mVaoId);
+    glDrawElements(GL_TRIANGLES, verticesNum, GL_UNSIGNED_INT, 0);
+    glBindVertexArray(0);
+}
+

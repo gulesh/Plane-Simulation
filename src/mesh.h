@@ -3,6 +3,8 @@
 #define meshmodel_H_
 
 #include "AGLM.h"
+#include <vector>
+#include "AGL.h"
 
 namespace agl {
    class Mesh
@@ -40,12 +42,31 @@ namespace agl {
 
       // face indices in this model
       unsigned int* indices() const;
+
+      //init function
+      void initBuffer();
+
+      //renderer 
+      void renderer() const;
+
+      //GLUint functions
+      GLuint getVertexId() const { return mPosId; }
+      GLuint getNormalId() const { return mNormalId; }
+      
+      // Vertex buffers
+      std::vector<GLuint> buffers;
    
    private:
    float* meshPositions;
    float* meshNormals;
    float* meshTextures;
    unsigned int* meshIndices;
+   GLuint mNormalId;
+   GLuint mIndicesId;
+   GLuint mPosId;
+   GLuint mTextureId;
+   GLuint mVaoId;        // The Vertex Array Object
+   GLuint mShaderId; //shaderId
    int verticesNum;
    int trianglesNum;
    glm::vec3 minVector = glm::vec3(999999.0f);

@@ -370,6 +370,8 @@ CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/main-confetti.cpp
 CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/particlesystem.h
 CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/renderer.h
 
+CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/GL/glew.h
+CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/GLFW/glfw3.h
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/glm/common.hpp
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/glm/detail/_fixes.hpp
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/glm/detail/_swizzle.hpp
@@ -460,6 +462,7 @@ CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/glm/vec2.hpp
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/glm/vec3.hpp
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/glm/vec4.hpp
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/glm/vector_relational.hpp
+CMakeFiles/confetti.dir/src/mesh.cpp.o: ../src/AGL.h
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../src/AGLM.h
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../src/mesh.cpp
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../src/mesh.h
