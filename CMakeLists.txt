@@ -86,24 +86,26 @@ set(RENDER_SOURCES
     src/osutils.cpp 
     src/skybox.h 
     src/skybox.cpp
-    )
-
-set(PSYS_SOURCES 
-    src/confetti.h
-    src/confetti.cpp
     src/myparticlesystem.h
     src/myparticlesystem.cpp
     src/particlesystem.h
     src/particlesystem.cpp
     )
 
+set(PSYS_SOURCES 
+    src/confetti.h
+    src/confetti.cpp
+    )
+
 set(SHADERS
     shaders/billboard.fs
     shaders/billboard.vs
-    shaders/phong.fs
-    shaders/phong.vs
+    shaders/phongPerFrag.fs
+    shaders/phongPerFrag.vs
     shaders/unlit.fs
-    shaders/unlit.vs)
+    shaders/unlit.vs
+    shaders/skybox.fs
+    shaders/skybox.vs)
 
 add_executable(billboard src/main-billboard.cpp ${RENDER_SOURCES} ${SHADERS})
 target_link_libraries(billboard ${CORE})

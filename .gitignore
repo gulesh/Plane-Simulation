@@ -1,0 +1,15 @@
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.blend1
+*.class
+a.out
+Debug
+Release
+.vs
+bin
+build
+*~
+*.swp
+*.swo

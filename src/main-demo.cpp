@@ -105,7 +105,7 @@ int main(int argc, char** argv)
       float dt = glfwGetTime() - lastTime;
       lastTime = glfwGetTime();
 
-      theSystem.update(dt);
+      theSystem.update(dt);  
       theSystem.draw();
 
       // Swap front and back buffers

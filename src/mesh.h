@@ -52,9 +52,8 @@ namespace agl {
       //GLUint functions
       GLuint getVertexId() const { return mPosId; }
       GLuint getNormalId() const { return mNormalId; }
+      GLuint getShaderId() const { return mShaderId; }
       
-      // Vertex buffers
-      std::vector<GLuint> buffers;
    
    private:
    float* meshPositions;
@@ -66,7 +65,7 @@ namespace agl {
    GLuint mPosId;
    GLuint mTextureId;
    GLuint mVaoId;        // The Vertex Array Object
-   GLuint mShaderId; //shaderId
+   GLuint mShaderId;     //shaderId
    int verticesNum;
    int trianglesNum;
    glm::vec3 minVector = glm::vec3(999999.0f);

@@ -8,6 +8,7 @@
 #include <sstream>
 #include <vector>
 #include "mesh.h"
+#include "skybox.h"
 #include "osutils.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform.hpp>
@@ -19,7 +20,7 @@ using namespace glm;
 using namespace agl;
 
 // globals
-// MyParticleSystem theSystem;
+// Renderer theRenderer;
 Mesh theModel;
 int theCurrentModel = 0;
 vector<string> theModelNames;
@@ -318,38 +319,39 @@ int main(int argc, char **argv)
 
     LoadModel("../model/"); //modified the loadModels function to just load one model
 
-    GLuint shaderId = LoadShader("../shaders/phong.vs", "../shaders/phong.fs");
-    glUseProgram(shaderId);
+    GLuint shaderPlaneId = LoadShader("../shaders/phongPerFrag.vs", "../shaders/phongPerFrag.fs");
+    glUseProgram(shaderPlaneId);
 
     //Per Vertex shader
-    GLuint mvpId = glGetUniformLocation(shaderId, "uMVP"); //MVP
-    GLuint mvmId = glGetUniformLocation(shaderId, "uMV");  //ModelViewMatrix
-    GLuint nmvId = glGetUniformLocation(shaderId, "uNMV"); //NormalMAtrix
+    GLuint mvpId = glGetUniformLocation(shaderPlaneId, "uMVP"); //MVP
+    GLuint mvmId = glGetUniformLocation(shaderPlaneId, "uMV");  //ModelViewMatrix
+    GLuint nmvId = glGetUniformLocation(shaderPlaneId, "uNMV"); //NormalMAtrix
 
-    glUniform3f(glGetUniformLocation(shaderId, "uMaterial.Ks"), 1.0, 1.0, 1.0);
-    glUniform3f(glGetUniformLocation(shaderId, "uMaterial.Kd"), 0.45, 0.45, 0.45);
-    glUniform3f(glGetUniformLocation(shaderId, "uMaterial.Ka"), 0.1, 0.1, 0.1);
-    glUniform1f(glGetUniformLocation(shaderId, "uMaterial.Shininess"), 80.0f);
-
-    glUniform3f(glGetUniformLocation(shaderId, "uLight.position"), 100.0, 100.0, 100.0);
-    glUniform3f(glGetUniformLocation(shaderId, "uLight.color"), 1.0, 1.0, 1.0);
-
+    // GLuint pvmId = glGetUniformLocation(shaderPlaneId, "uPV"); //ProjectionMAtrix
+    
     //PerFragment Shader
-    // glUniform3f(glGetUniformLocation(shaderId, "Ks"), 0.45, 0.45, 0.45);
-    // glUniform3f(glGetUniformLocation(shaderId, "Kd"), 0.45, 0.45, 0.45);
-    // glUniform3f(glGetUniformLocation(shaderId, "Ka"), 0.1, 0.1, 0.1);
-    // glUniform1f(glGetUniformLocation(shaderId, "Shininess"), 80.0f);
+    glUniform3f(glGetUniformLocation(shaderPlaneId, "Ks"), 0.45, 0.45, 0.45);
+    glUniform3f(glGetUniformLocation(shaderPlaneId, "Kd"), 0.45, 0.45, 0.45);
+    glUniform3f(glGetUniformLocation(shaderPlaneId, "Ka"), 0.1, 0.1, 0.1);
+    glUniform1f(glGetUniformLocation(shaderPlaneId, "Shininess"), 80.0f);
 
-    // glUniform4f(glGetUniformLocation(shaderId, "uLightPosition"), 100.0, 100.0, 100.0, 1.0);
-    // glUniform3f(glGetUniformLocation(shaderId, "color"), 1.0, 1.0, 1.0);
+    glUniform4f(glGetUniformLocation(shaderPlaneId, "uLightPosition"), 100.0, 100.0, 100.0, 1.0);
+    glUniform3f(glGetUniformLocation(shaderPlaneId, "color"), 1.0, 1.0, 1.0);
+
+    glUniform3f(glGetUniformLocation(shaderPlaneId, "dir"), 1.0, 0.0, 1.0);
+    GLuint timeParamId = glGetUniformLocation(shaderPlaneId, "time");
+    glUniform1f(timeParamId, 0);
+
+    // GLuint locId = glGetUniformLocation(shaderPlaneId, "cubeBox");
+    // glUniform1i(locId, 0);
 
     glClearColor(0, 0, 0, 1);
 
-    // theSystem.init(500); // TODO: Set number of particles here
-    // float fov = radians(30.0f);
-    // ParticleSystem::GetRenderer().perspective(fov, 1.0f, 0.1f, 10.0f);
-    // ParticleSystem::GetRenderer().lookAt(vec3(0, 0, 4), vec3(0, 0, 0));
-    // float lastTime = glfwGetTime();
+    // theRenderer.init("../shaders/skybox.vs", "../shaders/skybox.fs");
+    // GLuint imageId = theRenderer.loadTexture("../textures/ParticleCloudWhite.png");
+    // theRenderer.perspective(radians(30.0f), 1.0f, 0.1f, 100.0f);
+
+    float lastTime = glfwGetTime();
 
     glm::vec3 lookfrom(0, 0, 1);
     viewMatrix = glm::lookAt(lookfrom, vec3(0), vec3(0, 1, 0));
@@ -362,17 +364,17 @@ int main(int argc, char **argv)
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the buffers
-
+        
+        // glUseProgram(shaderPlaneId);
         //update transform
         lookfrom.x = dist * sin(Azimuth) * cos(Elevation);
         lookfrom.y = dist * sin(Elevation);
         lookfrom.z = dist * cos(Azimuth) * cos(Elevation);
 
-        // float dt = glfwGetTime() - lastTime;
-        // lastTime = glfwGetTime();
+        float dt = glfwGetTime() - lastTime;
+        lastTime = glfwGetTime();
 
-        // theSystem.update(dt);
-        // theSystem.draw();
+        glUniform1f(timeParamId, lastTime);
 
         //setMVP
         viewMatrix = glm::lookAt(lookfrom, vec3(0), vec3(0, 1, 0));
@@ -385,9 +387,21 @@ int main(int argc, char **argv)
         glUniformMatrix4fv(mvmId, 1, GL_FALSE, &mv[0][0]);
         glUniformMatrix3fv(nmvId, 1, GL_FALSE, &nmv[0][0]);
 
+        // glUniformMatrix3fv(pvmId, 1, GL_FALSE, &projectionMatrix[0][0]);
+
         // Draw primitive
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, theElementbuffer);
         glDrawElements(GL_TRIANGLES, theModel.numTriangles() * 3, GL_UNSIGNED_INT, (void *)0);
+
+        
+        // float theta = glfwGetTime();
+        // float x = 6.0f * cos(theta);
+        // float z = 6.0f * sin(theta);
+        // theRenderer.lookAt(vec3(x, 0, z), vec3(0, 0, 0));
+
+        // theRenderer.begin(imageId, ALPHA);
+        // theRenderer.quad(vec3(0), vec4(1.0, 0.0, 0.5, 1.0), 2.0f);
+        // theRenderer.end();
 
         // Swap front and back buffers
         glfwSwapBuffers(window);
@@ -397,6 +411,6 @@ int main(int argc, char **argv)
     }
 
     glfwTerminate();
-    system("leaks mesh-viewer");
+    // system("leaks main-scene");
     return 0;
 }

@@ -9,6 +9,8 @@ out vec3 Normal;
 uniform mat4 uMV;
 uniform mat3 uNMV;
 uniform mat4 uMVP;
+uniform float time;
+uniform vec3 dir;
 
 void main ()
 {

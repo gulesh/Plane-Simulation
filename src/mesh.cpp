@@ -279,24 +279,20 @@ void Mesh::initBuffer()
       return;
 
    glGenBuffers(1, &mIndicesId);
-   //  buffers.push_back(indexBuf);
    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mIndicesId);
    glBufferData(GL_ELEMENT_ARRAY_BUFFER, trianglesNum * 3 * sizeof(unsigned int), meshIndices, GL_STATIC_DRAW);
 
    glGenBuffers(1, &mPosId);
-   //  buffers.push_back(mIndicesId);
    glBindBuffer(GL_ARRAY_BUFFER, mPosId);
    glBufferData(GL_ARRAY_BUFFER, verticesNum * sizeof(float), meshPositions, GL_STATIC_DRAW);
 
    glGenBuffers(1, &mNormalId);
-   //  buffers.push_back(mNormalId);
    glBindBuffer(GL_ARRAY_BUFFER, mNormalId);
    glBufferData(GL_ARRAY_BUFFER, verticesNum * sizeof(float), meshNormals, GL_STATIC_DRAW);
 
    if (meshTextures != nullptr)
    {
       glGenBuffers(1, &mTextureId);
-      //   buffers.push_back(mTextureId);
       glBindBuffer(GL_ARRAY_BUFFER, mTextureId);
       glBufferData(GL_ARRAY_BUFFER, verticesNum * sizeof(float), meshTextures, GL_STATIC_DRAW);
    }
