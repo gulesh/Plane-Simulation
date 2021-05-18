@@ -171,8 +171,10 @@ CMakeFiles/confetti.dir/src/confetti.cpp.o: ../src/AGLM.h
 CMakeFiles/confetti.dir/src/confetti.cpp.o: ../src/confetti.cpp
 CMakeFiles/confetti.dir/src/confetti.cpp.o: ../src/confetti.h
 CMakeFiles/confetti.dir/src/confetti.cpp.o: ../src/image.h
+CMakeFiles/confetti.dir/src/confetti.cpp.o: ../src/mesh.h
 CMakeFiles/confetti.dir/src/confetti.cpp.o: ../src/particlesystem.h
 CMakeFiles/confetti.dir/src/confetti.cpp.o: ../src/renderer.h
+CMakeFiles/confetti.dir/src/confetti.cpp.o: ../src/skybox.h
 
 CMakeFiles/confetti.dir/src/image.cpp.o: ../external/include/glm/common.hpp
 CMakeFiles/confetti.dir/src/image.cpp.o: ../external/include/glm/detail/_fixes.hpp
@@ -367,8 +369,10 @@ CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/AGLM.h
 CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/confetti.h
 CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/image.h
 CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/main-confetti.cpp
+CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/mesh.h
 CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/particlesystem.h
 CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/renderer.h
+CMakeFiles/confetti.dir/src/main-confetti.cpp.o: ../src/skybox.h
 
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/GL/glew.h
 CMakeFiles/confetti.dir/src/mesh.cpp.o: ../external/include/GLFW/glfw3.h
@@ -562,10 +566,12 @@ CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../external/include/glm/vect
 CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/AGL.h
 CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/AGLM.h
 CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/image.h
+CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/mesh.h
 CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/myparticlesystem.cpp
 CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/myparticlesystem.h
 CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/particlesystem.h
 CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/renderer.h
+CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o: ../src/skybox.h
 
 CMakeFiles/confetti.dir/src/osutils.cpp.o: ../src/osutils.cpp
 
@@ -664,9 +670,11 @@ CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../external/include/glm/vector
 CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../src/AGL.h
 CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../src/AGLM.h
 CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../src/image.h
+CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../src/mesh.h
 CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../src/particlesystem.cpp
 CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../src/particlesystem.h
 CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../src/renderer.h
+CMakeFiles/confetti.dir/src/particlesystem.cpp.o: ../src/skybox.h
 
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../external/include/GL/glew.h
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../external/include/GLFW/glfw3.h
@@ -763,8 +771,10 @@ CMakeFiles/confetti.dir/src/renderer.cpp.o: ../external/include/glm/vector_relat
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/AGL.h
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/AGLM.h
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/image.h
+CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/mesh.h
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/renderer.h
+CMakeFiles/confetti.dir/src/renderer.cpp.o: ../src/skybox.h
 
 CMakeFiles/confetti.dir/src/skybox.cpp.o: ../external/include/GL/glew.h
 CMakeFiles/confetti.dir/src/skybox.cpp.o: ../external/include/GLFW/glfw3.h

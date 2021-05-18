@@ -5,7 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/scene.dir/src/image.cpp.o"
   "CMakeFiles/scene.dir/src/main-scene.cpp.o"
   "CMakeFiles/scene.dir/src/mesh.cpp.o"
+  "CMakeFiles/scene.dir/src/myparticlesystem.cpp.o"
   "CMakeFiles/scene.dir/src/osutils.cpp.o"
+  "CMakeFiles/scene.dir/src/particlesystem.cpp.o"
   "CMakeFiles/scene.dir/src/renderer.cpp.o"
   "CMakeFiles/scene.dir/src/skybox.cpp.o"
 )

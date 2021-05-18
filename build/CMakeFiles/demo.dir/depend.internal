@@ -172,8 +172,10 @@ CMakeFiles/demo.dir/src/confetti.cpp.o
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/confetti.cpp
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/confetti.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/image.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.h
 CMakeFiles/demo.dir/src/image.cpp.o
  ../external/include/glm/common.hpp
  ../external/include/glm/detail/_fixes.hpp
@@ -367,10 +369,14 @@ CMakeFiles/demo.dir/src/main-demo.cpp.o
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/image.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/main-demo.cpp
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.h
 CMakeFiles/demo.dir/src/mesh.cpp.o
+ ../external/include/GL/glew.h
+ ../external/include/GLFW/glfw3.h
  ../external/include/glm/common.hpp
  ../external/include/glm/detail/_fixes.hpp
  ../external/include/glm/detail/_swizzle.hpp
@@ -461,6 +467,7 @@ CMakeFiles/demo.dir/src/mesh.cpp.o
  ../external/include/glm/vec3.hpp
  ../external/include/glm/vec4.hpp
  ../external/include/glm/vector_relational.hpp
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGL.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.cpp
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.h
@@ -560,10 +567,12 @@ CMakeFiles/demo.dir/src/myparticlesystem.cpp.o
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGL.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/image.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.h
 CMakeFiles/demo.dir/src/osutils.cpp.o
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/osutils.cpp
 CMakeFiles/demo.dir/src/particlesystem.cpp.o
@@ -662,9 +671,11 @@ CMakeFiles/demo.dir/src/particlesystem.cpp.o
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGL.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/image.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.h
 CMakeFiles/demo.dir/src/renderer.cpp.o
  ../external/include/GL/glew.h
  ../external/include/GLFW/glfw3.h
@@ -761,8 +772,10 @@ CMakeFiles/demo.dir/src/renderer.cpp.o
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGL.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/image.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.cpp
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h
+ /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.h
 CMakeFiles/demo.dir/src/skybox.cpp.o
  ../external/include/GL/glew.h
  ../external/include/GLFW/glfw3.h

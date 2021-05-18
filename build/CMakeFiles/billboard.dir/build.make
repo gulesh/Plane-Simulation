@@ -167,6 +167,32 @@ CMakeFiles/billboard.dir/src/skybox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/billboard.dir/src/skybox.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.cpp -o CMakeFiles/billboard.dir/src/skybox.cpp.s
 
+CMakeFiles/billboard.dir/src/myparticlesystem.cpp.o: CMakeFiles/billboard.dir/flags.make
+CMakeFiles/billboard.dir/src/myparticlesystem.cpp.o: ../src/myparticlesystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/billboard.dir/src/myparticlesystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/billboard.dir/src/myparticlesystem.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp
+
+CMakeFiles/billboard.dir/src/myparticlesystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/billboard.dir/src/myparticlesystem.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp > CMakeFiles/billboard.dir/src/myparticlesystem.cpp.i
+
+CMakeFiles/billboard.dir/src/myparticlesystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/billboard.dir/src/myparticlesystem.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp -o CMakeFiles/billboard.dir/src/myparticlesystem.cpp.s
+
+CMakeFiles/billboard.dir/src/particlesystem.cpp.o: CMakeFiles/billboard.dir/flags.make
+CMakeFiles/billboard.dir/src/particlesystem.cpp.o: ../src/particlesystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/billboard.dir/src/particlesystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/billboard.dir/src/particlesystem.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp
+
+CMakeFiles/billboard.dir/src/particlesystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/billboard.dir/src/particlesystem.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp > CMakeFiles/billboard.dir/src/particlesystem.cpp.i
+
+CMakeFiles/billboard.dir/src/particlesystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/billboard.dir/src/particlesystem.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp -o CMakeFiles/billboard.dir/src/particlesystem.cpp.s
+
 # Object files for target billboard
 billboard_OBJECTS = \
 "CMakeFiles/billboard.dir/src/main-billboard.cpp.o" \
@@ -175,7 +201,9 @@ billboard_OBJECTS = \
 "CMakeFiles/billboard.dir/src/renderer.cpp.o" \
 "CMakeFiles/billboard.dir/src/mesh.cpp.o" \
 "CMakeFiles/billboard.dir/src/osutils.cpp.o" \
-"CMakeFiles/billboard.dir/src/skybox.cpp.o"
+"CMakeFiles/billboard.dir/src/skybox.cpp.o" \
+"CMakeFiles/billboard.dir/src/myparticlesystem.cpp.o" \
+"CMakeFiles/billboard.dir/src/particlesystem.cpp.o"
 
 # External object files for target billboard
 billboard_EXTERNAL_OBJECTS =
@@ -187,10 +215,12 @@ billboard_EXTERNAL_OBJECTS =
 ../bin/billboard: CMakeFiles/billboard.dir/src/mesh.cpp.o
 ../bin/billboard: CMakeFiles/billboard.dir/src/osutils.cpp.o
 ../bin/billboard: CMakeFiles/billboard.dir/src/skybox.cpp.o
+../bin/billboard: CMakeFiles/billboard.dir/src/myparticlesystem.cpp.o
+../bin/billboard: CMakeFiles/billboard.dir/src/particlesystem.cpp.o
 ../bin/billboard: CMakeFiles/billboard.dir/build.make
 ../bin/billboard: /usr/local/lib/libglfw.dylib
 ../bin/billboard: CMakeFiles/billboard.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../bin/billboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../bin/billboard"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/billboard.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

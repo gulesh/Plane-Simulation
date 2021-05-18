@@ -483,7 +483,10 @@ src/myparticlesystem.o: src/myparticlesystem.cpp.o
 # target to build an object file
 src/myparticlesystem.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/src/myparticlesystem.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/myparticlesystem.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/myparticlesystem.cpp.o
 .PHONY : src/myparticlesystem.cpp.o
 
 src/myparticlesystem.i: src/myparticlesystem.cpp.i
@@ -493,7 +496,10 @@ src/myparticlesystem.i: src/myparticlesystem.cpp.i
 # target to preprocess a source file
 src/myparticlesystem.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/myparticlesystem.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/src/myparticlesystem.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/myparticlesystem.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/myparticlesystem.cpp.i
 .PHONY : src/myparticlesystem.cpp.i
 
 src/myparticlesystem.s: src/myparticlesystem.cpp.s
@@ -503,7 +509,10 @@ src/myparticlesystem.s: src/myparticlesystem.cpp.s
 # target to generate assembly for a file
 src/myparticlesystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/myparticlesystem.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/src/myparticlesystem.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/myparticlesystem.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/myparticlesystem.cpp.s
 .PHONY : src/myparticlesystem.cpp.s
 
 src/osutils.o: src/osutils.cpp.o
@@ -552,7 +561,10 @@ src/particlesystem.o: src/particlesystem.cpp.o
 # target to build an object file
 src/particlesystem.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/particlesystem.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/src/particlesystem.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/particlesystem.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/particlesystem.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/particlesystem.cpp.o
 .PHONY : src/particlesystem.cpp.o
 
 src/particlesystem.i: src/particlesystem.cpp.i
@@ -562,7 +574,10 @@ src/particlesystem.i: src/particlesystem.cpp.i
 # target to preprocess a source file
 src/particlesystem.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/particlesystem.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/src/particlesystem.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/particlesystem.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/particlesystem.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/particlesystem.cpp.i
 .PHONY : src/particlesystem.cpp.i
 
 src/particlesystem.s: src/particlesystem.cpp.s
@@ -572,7 +587,10 @@ src/particlesystem.s: src/particlesystem.cpp.s
 # target to generate assembly for a file
 src/particlesystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/particlesystem.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/src/particlesystem.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/particlesystem.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/particlesystem.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/particlesystem.cpp.s
 .PHONY : src/particlesystem.cpp.s
 
 src/renderer.o: src/renderer.cpp.o

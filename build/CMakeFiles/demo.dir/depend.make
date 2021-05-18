@@ -171,8 +171,10 @@ CMakeFiles/demo.dir/src/confetti.cpp.o: ../src/AGLM.h
 CMakeFiles/demo.dir/src/confetti.cpp.o: ../src/confetti.cpp
 CMakeFiles/demo.dir/src/confetti.cpp.o: ../src/confetti.h
 CMakeFiles/demo.dir/src/confetti.cpp.o: ../src/image.h
+CMakeFiles/demo.dir/src/confetti.cpp.o: ../src/mesh.h
 CMakeFiles/demo.dir/src/confetti.cpp.o: ../src/particlesystem.h
 CMakeFiles/demo.dir/src/confetti.cpp.o: ../src/renderer.h
+CMakeFiles/demo.dir/src/confetti.cpp.o: ../src/skybox.h
 
 CMakeFiles/demo.dir/src/image.cpp.o: ../external/include/glm/common.hpp
 CMakeFiles/demo.dir/src/image.cpp.o: ../external/include/glm/detail/_fixes.hpp
@@ -366,10 +368,14 @@ CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/AGL.h
 CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/AGLM.h
 CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/image.h
 CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/main-demo.cpp
+CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/mesh.h
 CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/myparticlesystem.h
 CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/particlesystem.h
 CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/renderer.h
+CMakeFiles/demo.dir/src/main-demo.cpp.o: ../src/skybox.h
 
+CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/GL/glew.h
+CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/GLFW/glfw3.h
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/glm/common.hpp
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/glm/detail/_fixes.hpp
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/glm/detail/_swizzle.hpp
@@ -460,6 +466,7 @@ CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/glm/vec2.hpp
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/glm/vec3.hpp
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/glm/vec4.hpp
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../external/include/glm/vector_relational.hpp
+CMakeFiles/demo.dir/src/mesh.cpp.o: ../src/AGL.h
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../src/AGLM.h
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../src/mesh.cpp
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../src/mesh.h
@@ -559,10 +566,12 @@ CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../external/include/glm/vector_r
 CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/AGL.h
 CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/AGLM.h
 CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/image.h
+CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/mesh.h
 CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/myparticlesystem.cpp
 CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/myparticlesystem.h
 CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/particlesystem.h
 CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/renderer.h
+CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/skybox.h
 
 CMakeFiles/demo.dir/src/osutils.cpp.o: ../src/osutils.cpp
 
@@ -661,9 +670,11 @@ CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../external/include/glm/vector_rel
 CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/AGL.h
 CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/AGLM.h
 CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/image.h
+CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/mesh.h
 CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/particlesystem.cpp
 CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/particlesystem.h
 CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/renderer.h
+CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/skybox.h
 
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../external/include/GL/glew.h
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../external/include/GLFW/glfw3.h
@@ -760,8 +771,10 @@ CMakeFiles/demo.dir/src/renderer.cpp.o: ../external/include/glm/vector_relationa
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/AGL.h
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/AGLM.h
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/image.h
+CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/mesh.h
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/renderer.h
+CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/skybox.h
 
 CMakeFiles/demo.dir/src/skybox.cpp.o: ../external/include/GL/glew.h
 CMakeFiles/demo.dir/src/skybox.cpp.o: ../external/include/GLFW/glfw3.h

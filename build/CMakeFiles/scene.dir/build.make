@@ -167,6 +167,32 @@ CMakeFiles/scene.dir/src/skybox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scene.dir/src/skybox.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.cpp -o CMakeFiles/scene.dir/src/skybox.cpp.s
 
+CMakeFiles/scene.dir/src/myparticlesystem.cpp.o: CMakeFiles/scene.dir/flags.make
+CMakeFiles/scene.dir/src/myparticlesystem.cpp.o: ../src/myparticlesystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/scene.dir/src/myparticlesystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scene.dir/src/myparticlesystem.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp
+
+CMakeFiles/scene.dir/src/myparticlesystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scene.dir/src/myparticlesystem.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp > CMakeFiles/scene.dir/src/myparticlesystem.cpp.i
+
+CMakeFiles/scene.dir/src/myparticlesystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scene.dir/src/myparticlesystem.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp -o CMakeFiles/scene.dir/src/myparticlesystem.cpp.s
+
+CMakeFiles/scene.dir/src/particlesystem.cpp.o: CMakeFiles/scene.dir/flags.make
+CMakeFiles/scene.dir/src/particlesystem.cpp.o: ../src/particlesystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/scene.dir/src/particlesystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scene.dir/src/particlesystem.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp
+
+CMakeFiles/scene.dir/src/particlesystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scene.dir/src/particlesystem.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp > CMakeFiles/scene.dir/src/particlesystem.cpp.i
+
+CMakeFiles/scene.dir/src/particlesystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scene.dir/src/particlesystem.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp -o CMakeFiles/scene.dir/src/particlesystem.cpp.s
+
 # Object files for target scene
 scene_OBJECTS = \
 "CMakeFiles/scene.dir/src/main-scene.cpp.o" \
@@ -175,7 +201,9 @@ scene_OBJECTS = \
 "CMakeFiles/scene.dir/src/renderer.cpp.o" \
 "CMakeFiles/scene.dir/src/mesh.cpp.o" \
 "CMakeFiles/scene.dir/src/osutils.cpp.o" \
-"CMakeFiles/scene.dir/src/skybox.cpp.o"
+"CMakeFiles/scene.dir/src/skybox.cpp.o" \
+"CMakeFiles/scene.dir/src/myparticlesystem.cpp.o" \
+"CMakeFiles/scene.dir/src/particlesystem.cpp.o"
 
 # External object files for target scene
 scene_EXTERNAL_OBJECTS =
@@ -187,10 +215,12 @@ scene_EXTERNAL_OBJECTS =
 ../bin/scene: CMakeFiles/scene.dir/src/mesh.cpp.o
 ../bin/scene: CMakeFiles/scene.dir/src/osutils.cpp.o
 ../bin/scene: CMakeFiles/scene.dir/src/skybox.cpp.o
+../bin/scene: CMakeFiles/scene.dir/src/myparticlesystem.cpp.o
+../bin/scene: CMakeFiles/scene.dir/src/particlesystem.cpp.o
 ../bin/scene: CMakeFiles/scene.dir/build.make
 ../bin/scene: /usr/local/lib/libglfw.dylib
 ../bin/scene: CMakeFiles/scene.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../bin/scene"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../bin/scene"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scene.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

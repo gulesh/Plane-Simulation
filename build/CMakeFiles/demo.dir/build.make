@@ -102,35 +102,9 @@ CMakeFiles/demo.dir/src/confetti.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/confetti.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/confetti.cpp -o CMakeFiles/demo.dir/src/confetti.cpp.s
 
-CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/myparticlesystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/src/myparticlesystem.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/myparticlesystem.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp
-
-CMakeFiles/demo.dir/src/myparticlesystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/myparticlesystem.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp > CMakeFiles/demo.dir/src/myparticlesystem.cpp.i
-
-CMakeFiles/demo.dir/src/myparticlesystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/myparticlesystem.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp -o CMakeFiles/demo.dir/src/myparticlesystem.cpp.s
-
-CMakeFiles/demo.dir/src/particlesystem.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/particlesystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/src/particlesystem.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/particlesystem.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp
-
-CMakeFiles/demo.dir/src/particlesystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/particlesystem.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp > CMakeFiles/demo.dir/src/particlesystem.cpp.i
-
-CMakeFiles/demo.dir/src/particlesystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/particlesystem.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp -o CMakeFiles/demo.dir/src/particlesystem.cpp.s
-
 CMakeFiles/demo.dir/src/AGLM.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/AGLM.cpp.o: ../src/AGLM.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo.dir/src/AGLM.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/src/AGLM.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/AGLM.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.cpp
 
 CMakeFiles/demo.dir/src/AGLM.cpp.i: cmake_force
@@ -143,7 +117,7 @@ CMakeFiles/demo.dir/src/AGLM.cpp.s: cmake_force
 
 CMakeFiles/demo.dir/src/image.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/image.cpp.o: ../src/image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/demo.dir/src/image.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/src/image.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/image.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/image.cpp
 
 CMakeFiles/demo.dir/src/image.cpp.i: cmake_force
@@ -156,7 +130,7 @@ CMakeFiles/demo.dir/src/image.cpp.s: cmake_force
 
 CMakeFiles/demo.dir/src/renderer.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/renderer.cpp.o: ../src/renderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/demo.dir/src/renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo.dir/src/renderer.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/renderer.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.cpp
 
 CMakeFiles/demo.dir/src/renderer.cpp.i: cmake_force
@@ -169,7 +143,7 @@ CMakeFiles/demo.dir/src/renderer.cpp.s: cmake_force
 
 CMakeFiles/demo.dir/src/mesh.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/mesh.cpp.o: ../src/mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/demo.dir/src/mesh.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/demo.dir/src/mesh.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/mesh.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.cpp
 
 CMakeFiles/demo.dir/src/mesh.cpp.i: cmake_force
@@ -182,7 +156,7 @@ CMakeFiles/demo.dir/src/mesh.cpp.s: cmake_force
 
 CMakeFiles/demo.dir/src/osutils.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/osutils.cpp.o: ../src/osutils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/demo.dir/src/osutils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/demo.dir/src/osutils.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/osutils.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/osutils.cpp
 
 CMakeFiles/demo.dir/src/osutils.cpp.i: cmake_force
@@ -195,7 +169,7 @@ CMakeFiles/demo.dir/src/osutils.cpp.s: cmake_force
 
 CMakeFiles/demo.dir/src/skybox.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/skybox.cpp.o: ../src/skybox.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/demo.dir/src/skybox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/demo.dir/src/skybox.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/skybox.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.cpp
 
 CMakeFiles/demo.dir/src/skybox.cpp.i: cmake_force
@@ -206,32 +180,58 @@ CMakeFiles/demo.dir/src/skybox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/skybox.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.cpp -o CMakeFiles/demo.dir/src/skybox.cpp.s
 
+CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/src/myparticlesystem.cpp.o: ../src/myparticlesystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/demo.dir/src/myparticlesystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/myparticlesystem.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp
+
+CMakeFiles/demo.dir/src/myparticlesystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/myparticlesystem.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp > CMakeFiles/demo.dir/src/myparticlesystem.cpp.i
+
+CMakeFiles/demo.dir/src/myparticlesystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/myparticlesystem.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/myparticlesystem.cpp -o CMakeFiles/demo.dir/src/myparticlesystem.cpp.s
+
+CMakeFiles/demo.dir/src/particlesystem.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/src/particlesystem.cpp.o: ../src/particlesystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/demo.dir/src/particlesystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/particlesystem.cpp.o -c /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp
+
+CMakeFiles/demo.dir/src/particlesystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/particlesystem.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp > CMakeFiles/demo.dir/src/particlesystem.cpp.i
+
+CMakeFiles/demo.dir/src/particlesystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/particlesystem.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp -o CMakeFiles/demo.dir/src/particlesystem.cpp.s
+
 # Object files for target demo
 demo_OBJECTS = \
 "CMakeFiles/demo.dir/src/main-demo.cpp.o" \
 "CMakeFiles/demo.dir/src/confetti.cpp.o" \
-"CMakeFiles/demo.dir/src/myparticlesystem.cpp.o" \
-"CMakeFiles/demo.dir/src/particlesystem.cpp.o" \
 "CMakeFiles/demo.dir/src/AGLM.cpp.o" \
 "CMakeFiles/demo.dir/src/image.cpp.o" \
 "CMakeFiles/demo.dir/src/renderer.cpp.o" \
 "CMakeFiles/demo.dir/src/mesh.cpp.o" \
 "CMakeFiles/demo.dir/src/osutils.cpp.o" \
-"CMakeFiles/demo.dir/src/skybox.cpp.o"
+"CMakeFiles/demo.dir/src/skybox.cpp.o" \
+"CMakeFiles/demo.dir/src/myparticlesystem.cpp.o" \
+"CMakeFiles/demo.dir/src/particlesystem.cpp.o"
 
 # External object files for target demo
 demo_EXTERNAL_OBJECTS =
 
 ../bin/demo: CMakeFiles/demo.dir/src/main-demo.cpp.o
 ../bin/demo: CMakeFiles/demo.dir/src/confetti.cpp.o
-../bin/demo: CMakeFiles/demo.dir/src/myparticlesystem.cpp.o
-../bin/demo: CMakeFiles/demo.dir/src/particlesystem.cpp.o
 ../bin/demo: CMakeFiles/demo.dir/src/AGLM.cpp.o
 ../bin/demo: CMakeFiles/demo.dir/src/image.cpp.o
 ../bin/demo: CMakeFiles/demo.dir/src/renderer.cpp.o
 ../bin/demo: CMakeFiles/demo.dir/src/mesh.cpp.o
 ../bin/demo: CMakeFiles/demo.dir/src/osutils.cpp.o
 ../bin/demo: CMakeFiles/demo.dir/src/skybox.cpp.o
+../bin/demo: CMakeFiles/demo.dir/src/myparticlesystem.cpp.o
+../bin/demo: CMakeFiles/demo.dir/src/particlesystem.cpp.o
 ../bin/demo: CMakeFiles/demo.dir/build.make
 ../bin/demo: /usr/local/lib/libglfw.dylib
 ../bin/demo: CMakeFiles/demo.dir/link.txt
