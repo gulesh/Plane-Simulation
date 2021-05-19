@@ -265,6 +265,7 @@ CMakeFiles/scene.dir/src/main-scene.cpp.o
  ../external/include/glm/vec3.hpp
  ../external/include/glm/vec4.hpp
  ../external/include/glm/vector_relational.hpp
+ ../external/include/stb/stb_image.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGL.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.h
  /Users/gulesh_shukla/cs312/Plane_Contrails/src/image.h

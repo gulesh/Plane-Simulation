@@ -264,6 +264,7 @@ CMakeFiles/scene.dir/src/main-scene.cpp.o: ../external/include/glm/vec2.hpp
 CMakeFiles/scene.dir/src/main-scene.cpp.o: ../external/include/glm/vec3.hpp
 CMakeFiles/scene.dir/src/main-scene.cpp.o: ../external/include/glm/vec4.hpp
 CMakeFiles/scene.dir/src/main-scene.cpp.o: ../external/include/glm/vector_relational.hpp
+CMakeFiles/scene.dir/src/main-scene.cpp.o: ../external/include/stb/stb_image.h
 CMakeFiles/scene.dir/src/main-scene.cpp.o: ../src/AGL.h
 CMakeFiles/scene.dir/src/main-scene.cpp.o: ../src/AGLM.h
 CMakeFiles/scene.dir/src/main-scene.cpp.o: ../src/image.h
