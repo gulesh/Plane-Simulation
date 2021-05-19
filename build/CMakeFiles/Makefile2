@@ -72,9 +72,8 @@ CMAKE_BINARY_DIR = /Users/gulesh_shukla/cs312/Plane_Contrails/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/confetti.dir/all
-all: CMakeFiles/scene2.dir/all
 all: CMakeFiles/demo.dir/all
+all: CMakeFiles/confetti.dir/all
 all: CMakeFiles/scene.dir/all
 all: CMakeFiles/billboard.dir/all
 
@@ -86,67 +85,12 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/confetti.dir/clean
-clean: CMakeFiles/scene2.dir/clean
 clean: CMakeFiles/demo.dir/clean
+clean: CMakeFiles/confetti.dir/clean
 clean: CMakeFiles/scene.dir/clean
 clean: CMakeFiles/billboard.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/confetti.dir
-
-# All Build rule for target.
-CMakeFiles/confetti.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21 "Built target confetti"
-.PHONY : CMakeFiles/confetti.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/confetti.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/confetti.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles 0
-.PHONY : CMakeFiles/confetti.dir/rule
-
-# Convenience name for target.
-confetti: CMakeFiles/confetti.dir/rule
-
-.PHONY : confetti
-
-# clean rule for target.
-CMakeFiles/confetti.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/clean
-.PHONY : CMakeFiles/confetti.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/scene2.dir
-
-# All Build rule for target.
-CMakeFiles/scene2.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52 "Built target scene2"
-.PHONY : CMakeFiles/scene2.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/scene2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/scene2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles 0
-.PHONY : CMakeFiles/scene2.dir/rule
-
-# Convenience name for target.
-scene2: CMakeFiles/scene2.dir/rule
-
-.PHONY : scene2
-
-# clean rule for target.
-CMakeFiles/scene2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene2.dir/build.make CMakeFiles/scene2.dir/clean
-.PHONY : CMakeFiles/scene2.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/demo.dir
@@ -174,6 +118,33 @@ demo: CMakeFiles/demo.dir/rule
 CMakeFiles/demo.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/clean
 .PHONY : CMakeFiles/demo.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/confetti.dir
+
+# All Build rule for target.
+CMakeFiles/confetti.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21 "Built target confetti"
+.PHONY : CMakeFiles/confetti.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/confetti.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/confetti.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles 0
+.PHONY : CMakeFiles/confetti.dir/rule
+
+# Convenience name for target.
+confetti: CMakeFiles/confetti.dir/rule
+
+.PHONY : confetti
+
+# clean rule for target.
+CMakeFiles/confetti.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/clean
+.PHONY : CMakeFiles/confetti.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/scene.dir

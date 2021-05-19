@@ -837,6 +837,8 @@ AGL.h
 /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGL.h
 AGLM.h
 /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.h
+mesh.h
+/Users/gulesh_shukla/cs312/Plane_Contrails/src/mesh.h
 cmath
 -
 myparticlesystem.h
@@ -846,12 +848,6 @@ myparticlesystem.h
 particlesystem.h
 /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.h
 
-/Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.cpp
-particlesystem.h
-/Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.h
-AGLM.h
-/Users/gulesh_shukla/cs312/Plane_Contrails/src/AGLM.h
-
 /Users/gulesh_shukla/cs312/Plane_Contrails/src/particlesystem.h
 AGL.h
 /Users/gulesh_shukla/cs312/Plane_Contrails/src/AGL.h
@@ -860,18 +856,6 @@ image.h
 renderer.h
 /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h
 vector
--
-
-/Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.cpp
-renderer.h
-/Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h
-skybox.h
-/Users/gulesh_shukla/cs312/Plane_Contrails/src/skybox.h
-fstream
--
-vector
--
-sstream
 -
 
 /Users/gulesh_shukla/cs312/Plane_Contrails/src/renderer.h

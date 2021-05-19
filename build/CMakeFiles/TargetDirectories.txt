@@ -1,7 +1,6 @@
 /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/rebuild_cache.dir
+/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/demo.dir
 /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/edit_cache.dir
 /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/confetti.dir
-/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/scene2.dir
-/Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/demo.dir
 /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/scene.dir
 /Users/gulesh_shukla/cs312/Plane_Contrails/build/CMakeFiles/billboard.dir
