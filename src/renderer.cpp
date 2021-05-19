@@ -45,7 +45,6 @@ vec3 Renderer::cameraPosition() const
 
 void Renderer::init(const std::string& vertex, const std::string& fragment)
 {
-   cubeBox = new SkyBox(6);
    mInitialized = true;
    const float positions[] =
    {
@@ -117,75 +116,11 @@ void Renderer::begin(GLuint texIf, BlendMode mode)
    mat4 mvp = mProjectionMatrix * mViewMatrix;
    glUniformMatrix4fv(glGetUniformLocation(mShaderId, "uVP"), 1, GL_FALSE, &mvp[0][0]);
    glUniform3f(glGetUniformLocation(mShaderId, "uCameraPos"), mLookfrom[0], mLookfrom[1], mLookfrom[2]);
-
-   // glActiveTexture(GL_TEXTURE1);
-   // glDepthMask(GL_FALSE);
-   // vector<string> sides = { "../textures/cube/right.png", "../textures/cube/left.png", "../textures/cube/front.png",
-   //                          "../textures/cube/back.png", "../textures/cube/top.png", "../textures/cube/bottom.png" };
-
-   // GLuint cubemapID = loadBackgroundMap(sides);
-   // glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapID);
-   // glUniform1i(glGetUniformLocation(mShaderId, "cubeBoxTex"), 1);
-   // glUniform1i(glGetUniformLocation(mShaderId, "drawSkyBox"), 1);
-   // cubeBox->render();
-   // glDepthMask(GL_TRUE);
-  
-   // glUniform1i(glGetUniformLocation(mShaderId, "drawSkyBox"), 0);
    GLuint locId = glGetUniformLocation(mShaderId, "image");
-
    glUniform1i(locId, 0);
 
    glBindVertexArray(mVaoId);
    glEnableVertexAttribArray(0); // 0 -> Sending VertexPositions to array #0 in the active shader
-}
-
-GLuint Renderer::loadBackgroundMap(vector<string> cubeFaces)
-{
-    glEnable(GL_TEXTURE1);
-    glActiveTexture(GL_TEXTURE1);
-
-    GLuint texId;
-    glGenTextures(1, &texId);
-    glBindTexture(GL_TEXTURE_CUBE_MAP, texId);
-
-    GLuint targets[] = {
-        GL_TEXTURE_CUBE_MAP_POSITIVE_X,
-        GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
-        GL_TEXTURE_CUBE_MAP_POSITIVE_Y,
-        GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
-        GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
-        GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
-    };
-
-   //  int imageWidth, imageHeight, nrChannels;
-    for ( int i = 0; i < cubeFaces.size(); i++)
-    {
-        Image image;
-        image.load(cubeFaces[i]);
-      //   std::cout << image.data().x << std::endl;
-        std::cout << cubeFaces[i] << std::endl;
-        std::cout << "ca...t load" << std::endl;
-        unsigned char* pixelData = image.data();
-        std::cout << image.data()[0]<< std::endl;
-
-        if (pixelData)
-        {
-            glTexImage2D(targets[i],
-                0, GL_RGBA, image.width(), image.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, pixelData
-            );
-        }
-        else
-        {
-            std::cout << "Image not loaded " << cubeFaces[i] << std::endl;
-        }
-    }
-    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-
-    return texId;
 }
 
 

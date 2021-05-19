@@ -3,6 +3,7 @@
 
 #include "AGL.h"
 #include "AGLM.h"
+#include "stb/stb_image.h"
 #include <cmath>
 #include <fstream>
 #include <sstream>
@@ -21,6 +22,7 @@ using namespace agl;
 
 // globals
 MyParticleSystem theSystem;
+// SkyBox box = new SkyBox(6);
 Mesh theModel;
 int theCurrentModel = 0;
 vector<string> theModelNames;
@@ -65,6 +67,51 @@ float Elevation = 0.0f;
 GLuint theVboPosId;
 GLuint theVboNormalId;
 GLuint theElementbuffer;
+GLuint theVboBackPosId;
+
+float skyboxVertices[] = {
+    // positions
+    -1.0f, 1.0f, -1.0f,
+    -1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f, 1.0f, -1.0f,
+    -1.0f, 1.0f, -1.0f,
+
+    -1.0f, -1.0f, 1.0f,
+    -1.0f, -1.0f, -1.0f,
+    -1.0f, 1.0f, -1.0f,
+    -1.0f, 1.0f, -1.0f,
+    -1.0f, 1.0f, 1.0f,
+    -1.0f, -1.0f, 1.0f,
+
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+
+    -1.0f, -1.0f, 1.0f,
+    -1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, -1.0f, 1.0f,
+    -1.0f, -1.0f, 1.0f,
+
+    -1.0f, 1.0f, -1.0f,
+    1.0f, 1.0f, -1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    -1.0f, 1.0f, 1.0f,
+    -1.0f, 1.0f, -1.0f,
+
+    -1.0f, -1.0f, -1.0f,
+    -1.0f, -1.0f, 1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    -1.0f, -1.0f, 1.0f,
+    1.0f, -1.0f, 1.0f};
 
 static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods)
 {
@@ -252,6 +299,57 @@ static void LoadModel(const std::string &dir)
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, theModel.numTriangles() * 3 * sizeof(unsigned int), theModel.indices(), GL_DYNAMIC_DRAW);
 }
 
+static GLuint loadBackgroundMap()
+{
+    glActiveTexture(GL_TEXTURE1);
+    GLuint texBackId;
+    glGenTextures(1, &texBackId);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, texBackId);
+    vector<string> cubeFaces = {"../textures/cube/right.jpg", "../textures/cube/left.jpg", "../textures/cube/front.jpg",
+                                "../textures/cube/back.jpg", "../textures/cube/top.jpg", "../textures/cube/bottom.jpg"};
+
+    GLuint targets[] = {
+        GL_TEXTURE_CUBE_MAP_POSITIVE_X,
+        GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
+        GL_TEXTURE_CUBE_MAP_POSITIVE_Y,
+        GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
+        GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
+        GL_TEXTURE_CUBE_MAP_NEGATIVE_Z};
+
+    for (int i = 0; i < cubeFaces.size(); i++)
+    {
+        Image image;
+        image.load(cubeFaces[i]);
+        //   std::cout << image.data().x << std::endl;
+        std::cout << cubeFaces[i] << std::endl;
+        std::cout << " width image" << image.width() << std::endl;
+        // unsigned char *pixelData = image.data();
+        std::cout << " height data" << image.height() << std::endl;
+        std::cout << "getting pixel 100, 100" << image.get_vec3(100, 100) << std::endl;
+
+        if (image.data())
+        {
+            std::cout << "indise loop if clause" << targets[i] << std::endl;
+            glTexImage2D(targets[i],
+                         0, GL_RGBA, image.width(), image.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, image.data());
+            std::cout << "af txtImage2d loop if clause" << std::endl;
+            stbi_image_free(image.data());
+        }
+        else
+        {
+            std::cout << "Image not loaded " << cubeFaces[i] << std::endl;
+            stbi_image_free(image.data());
+        }
+    }
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+
+    return texBackId;
+}
+
 static GLuint LoadShader(const std::string &vertex, const std::string &fragment)
 {
     GLint result;
@@ -355,6 +453,35 @@ int main(int argc, char **argv)
 
     LoadModel("../model/"); //modified the loadModels function to just load one model
 
+    //setting the background
+    glDepthMask(GL_FALSE);
+    glGenBuffers(1, &theVboBackPosId);
+    glBindBuffer(GL_ARRAY_BUFFER, theVboBackPosId); // always bind before setting data
+    glBufferData(GL_ARRAY_BUFFER, 18 * sizeof(float), skyboxVertices, GL_STATIC_DRAW);
+
+    GLuint vabId;
+    glGenVertexArrays(1, &vabId);
+    glBindVertexArray(vabId);
+    glEnableVertexAttribArray(0); // 0 -> Sending VertexPositions to array #0 in the active shader
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte *)NULL);
+
+    GLuint shaderBackGroundId = LoadShader("../shaders/skybox.vs", "../shaders/skybox.fs");
+    glUseProgram(shaderBackGroundId);
+    // cout << shaderBackGroundId << endl;
+    GLuint mvId = glGetUniformLocation(shaderBackGroundId, "uMV"); //MVP
+    GLuint pvId = glGetUniformLocation(shaderBackGroundId, "uPV"); //ModelViewMatrix
+    viewMatrix = glm::lookAt(vec3(0, 0, 1), vec3(0), vec3(0, 1, 0));
+    projectionMatrix = glm::perspective(glm::radians(60.0f), (float)width / height, 0.01f, 100.0f);
+    glUniformMatrix4fv(mvId, 1, GL_FALSE, &viewMatrix[0][0]);
+    glUniformMatrix4fv(pvId, 1, GL_FALSE, &projectionMatrix[0][0]);
+    glUniform1i(glGetUniformLocation(shaderBackGroundId, "cubeBoxTex"), 1);
+    GLuint textId = loadBackgroundMap();
+    // box->render(textId);
+    glBindVertexArray(vabId);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, textId);
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+    glDepthMask(GL_TRUE);
+
     GLuint shaderPlaneId = LoadShader("../shaders/phongPerFrag.vs", "../shaders/phongPerFrag.fs");
     glUseProgram(shaderPlaneId);
 
@@ -394,8 +521,6 @@ int main(int argc, char **argv)
     ParticleSystem::GetRenderer().perspective(fov, (float)width / height, 0.01f, 100.0f);
     ParticleSystem::GetRenderer().lookAt(lookfrom, vec3(0, 0, 0));
     float lastTime = glfwGetTime();
-
-    // cout << "offsett: " << theSystem.getOffset() << "curentposition" << theSystem.getCurrentPlanePosition() << endl;
 
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window))
@@ -459,6 +584,7 @@ int main(int argc, char **argv)
         // glm::mat4 planeMovement = glm::translate(glm::mat4(1.0f), currentPlanePos); // set position here!
         // modelMatrix = planeMovement * scaled * translated;
         // // modelMatrix = scaled * translated;
+
         viewMatrix = glm::lookAt(lookfrom, vec3(0), vec3(0, 1, 0));
         mv = viewMatrix * modelMatrix;
 

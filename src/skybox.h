@@ -1,5 +1,6 @@
 #ifndef SKYBOX_H
 #define SKYBOX_H
+#include "AGL.h"
 
 class SkyBox 
 {
@@ -9,7 +10,7 @@ private:
 public:
     SkyBox(int size);
 
-    void render() const;
+    void render(GLuint h) const;
 };
 
 
