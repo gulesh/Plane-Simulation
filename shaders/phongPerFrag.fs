@@ -18,6 +18,7 @@ void main()
     vec3 v = normalize(vec3(-Position));
     vec3 r = reflect(-s, n);
     vec3 color = color * (Ka + Kd * max( dot(s,n), 0.0) + Ks * pow(max( dot(r,v), 0.0), Shininess));
+    // vec3 color = Position;
     FragColor = vec4(color, 1.0);
 }
 

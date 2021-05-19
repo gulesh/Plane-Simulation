@@ -119,6 +119,4 @@ target_link_libraries(demo ${CORE})
 add_executable(scene src/main-scene.cpp ${RENDER_SOURCES} ${SHADERS})
 target_link_libraries(scene ${CORE})
 
-add_executable(scene2 src/main-scene2.cpp ${RENDER_SOURCES} ${SHADERS})
-target_link_libraries(scene2 ${CORE})
 

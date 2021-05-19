@@ -29,6 +29,7 @@ namespace agl {
       virtual void end();
 
       virtual bool initialized() const;
+      virtual GLuint returnShaderId() const {return mShaderId; }
       glm::vec3 cameraPosition() const;
 
    protected:
