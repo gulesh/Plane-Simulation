@@ -11,10 +11,10 @@ For the Final project, I am trying to create a simulator for contrails created b
 ## Basic_Features
 1. Create particles
 2. Upload Plane Models
-3. Move Plane using velocity
-4. Rotate camera using Mouse
-5. Create contrails
-6. Zoom in and Zoom out (using keyboard and mouse)
+3. Rotate camera using Mouse
+4. Create contrails
+5. Zoom in and Zoom out (using keyboard and mouse)
+6. Move Plane using velocity
 
 ## Additional work
 1. Adding sky background to give real look
@@ -24,9 +24,9 @@ For the Final project, I am trying to create a simulator for contrails created b
 - This week
   -  Set up basic Environment like view window, camera, make files etc.
   -  uploading meshes, creating particles and generating contrails
-  -  adding velocity to the plane
   -  Camera Rotation
   -  Zoom in Zoom out
+  -  adding velocity to the plane
 - Next Week
   - Move incomplete task from last week if any
   - work on Additional features
