@@ -17,7 +17,7 @@ For the Final project, I am trying to create a simulator for contrails created b
 5. Zoom in and Zoom out (using keyboard and mouse)
 6. Adding sky background to give real look
 
-## Additional work
+## Additional features depending on time (not implemented)
 1. Move plane (currently stationary)
 2. Add texture to the plane
 
