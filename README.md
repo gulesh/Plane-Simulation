@@ -14,7 +14,6 @@ particles/build $ cmake -G "Visual Studio 16 2019" ..
 particles/build $ start Plane_Contrails.sln
 ```
 
-Your solution file should contain two projects: `pixmap_art` and `pixmap_test`.
 To run from the git bash command shell, 
 
 ```
