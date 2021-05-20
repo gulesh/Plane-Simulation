@@ -4,6 +4,7 @@
 1. [Main_Idea](#Main_Idea)
 2. [Features](#Features)
 3. [Timeline](#Timeline)
+4. [Algorithms](#Algorithms)
 
 ## Main_Idea
 For the Final project, I am trying to create a simulator for contrails created by planes. The motivation behind is that we have worked with particles systems and meshes in previous two labs. So, for final project, I am trying to add velocity to the plane and add smoke particles to give a natural look.
@@ -14,10 +15,10 @@ For the Final project, I am trying to create a simulator for contrails created b
 3. Rotate camera using Mouse
 4. Create contrails
 5. Zoom in and Zoom out (using keyboard and mouse)
-6. Move Plane using velocity
+6. Adding sky background to give real look
 
 ## Additional work
-1. Adding sky background to give real look
+1. Move plane (currently stationary)
 2. Add texture to the plane
 
 ## Timeline
@@ -30,5 +31,8 @@ For the Final project, I am trying to create a simulator for contrails created b
 - Next Week
   - Move incomplete task from last week if any
   - work on Additional features
+
+## Algorithms
+- I plan to use 
 
 
