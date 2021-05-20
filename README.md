@@ -21,9 +21,7 @@ Your solution file should contain two projects: `pixmap_art` and `pixmap_test`.
 To run from the git bash command shell, 
 
 ```
-particles/build $ ../bin/Debug/billboard
-particles/build $ ../bin/Debug/confetti
-particles/build $ ../bin/Debug/demo
+particles/build $ ../bin/Debug/scene
 ```
 
 *macOS*
@@ -40,9 +38,7 @@ particles/build $ make
 To run each program from build, you would type
 
 ```
-particles/build $ ../bin/billboard
-particles/build $ ../bin/confetti
-particles/build $ ../bin/demo
+particles/build $ ../bin/scene
 ```
 
 ## Results
