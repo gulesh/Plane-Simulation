@@ -1,8 +1,3 @@
-
-
-
-https://user-images.githubusercontent.com/60520906/119023313-ad9a2180-b96f-11eb-9893-3cb3cb1dd809.mov
-
 # Plane_Contrails
 
 **Image_Preview of the Project**
