@@ -55,7 +55,7 @@ particles/build $ ../bin/scene
  
 <img width="493" alt="Screen Shot 2021-05-20 at 2 33 13 PM" src="https://user-images.githubusercontent.com/60520906/119031023-a0cdfb80-b978-11eb-9395-4b6f8c1ccac3.png">
 
-- All objects combined give the following image:
+- All objects combined give the following image (Top View):
 
 <img width="491" alt="Screen Shot 2021-05-20 at 1 24 55 PM" src="https://user-images.githubusercontent.com/60520906/119022634-dec62200-b96e-11eb-89c6-13de7d2285bc.png">
 
