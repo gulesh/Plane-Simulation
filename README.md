@@ -1,8 +1,8 @@
-# particles
+# Plane_Contrails
 
-Implements particle systems using openGL
+**Image_Preview of the Project**
 
-TODO: Add a representative image for your project here
+<img width="491" alt="Screen Shot 2021-05-20 at 1 24 55 PM" src="https://user-images.githubusercontent.com/60520906/119022634-dec62200-b96e-11eb-89c6-13de7d2285bc.png">
 
 ## How to build
 
@@ -43,4 +43,5 @@ particles/build $ ../bin/scene
 
 ## Results
 
-** Project Demo ** 
+**Project Demo** 
+
