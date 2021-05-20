@@ -14,7 +14,7 @@ Open git bash to the directory containing this repository.
 particles $ mkdir build
 particles $ cd build
 particles/build $ cmake -G "Visual Studio 16 2019" ..
-particles/build $ start CS312-Particles.sln
+particles/build $ start Plane_Contrails.sln
 ```
 
 Your solution file should contain two projects: `pixmap_art` and `pixmap_test`.
@@ -43,4 +43,4 @@ particles/build $ ../bin/scene
 
 ## Results
 
-TODO: Show your work
+** Project Demo ** 
