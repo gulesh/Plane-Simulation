@@ -108,3 +108,9 @@ particles/build $ ../bin/scene
 
 https://user-images.githubusercontent.com/60520906/119023339-b8ed4d00-b96f-11eb-833e-2820a7a6d8e0.mov
 
+# Furue Implementation Ideas
+- make the plane move.
+- allow multiple contrails 
+- add texture to the plane.
+- add clouds to give it a more realistic look.
+
