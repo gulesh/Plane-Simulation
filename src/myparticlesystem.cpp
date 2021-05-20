@@ -25,7 +25,7 @@ void MyParticleSystem::createParticles(int size)
    {
       Particle p{vec3(0, currentPlanePosition.y + tempDist, 0), vec3(vec3(0, 1, 0)), vec4(1.0, 1.0, 1.0, 1.0), psize, 0.0f};
       // psize = psize + 0.1f;
-      tempDist = tempDist + 0.005f;
+      tempDist = tempDist + 0.05f;
       mParticles.push_back(p);
       size--;
    }
@@ -45,11 +45,11 @@ void MyParticleSystem::update(float dt)
       Particle p = mParticles[i];
       //changing position
       p.pos = p.pos + p.vel * dt; // update particle properties
-      p.size = p.size + 0.005f;
-      if (p.pos.y < -1.0f || p.pos.y > 1.0f)
+      p.size = p.size + 0.009f;
+      if (p.pos.y < -4.0f || p.pos.y > 4.0f)
       {
          p.pos.y = currentPlanePosition.y;
-         p.size = 0;
+         p.size = 0.009;
       }
 
       if (i != 0)

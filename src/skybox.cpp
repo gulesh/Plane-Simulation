@@ -66,11 +66,9 @@ SkyBox::SkyBox(int side)
     glBindVertexArray(0);
 }
 
-void SkyBox::render(GLuint id) const
+void SkyBox::render() const
 {
     glBindVertexArray(vaoHandle);
-    glBindTexture(GL_TEXTURE_CUBE_MAP, id);
-    // glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
-    glDrawArrays(GL_TRIANGLES, 0, 36); 
+    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
 }

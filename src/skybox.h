@@ -10,7 +10,7 @@ private:
 public:
     SkyBox(int size);
 
-    void render(GLuint h) const;
+    void render() const;
 };
 
 

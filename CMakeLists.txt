@@ -92,10 +92,6 @@ set(RENDER_SOURCES
     src/particlesystem.cpp
     )
 
-set(PSYS_SOURCES 
-    src/confetti.h
-    src/confetti.cpp
-    )
 
 set(SHADERS
     shaders/billboard.fs
@@ -109,12 +105,6 @@ set(SHADERS
 
 add_executable(billboard src/main-billboard.cpp ${RENDER_SOURCES} ${SHADERS})
 target_link_libraries(billboard ${CORE})
-
-add_executable(confetti src/main-confetti.cpp ${PSYS_SOURCES} ${RENDER_SOURCES} ${SHADERS})
-target_link_libraries(confetti ${CORE})
-
-add_executable(demo src/main-demo.cpp ${PSYS_SOURCES} ${RENDER_SOURCES} ${SHADERS})
-target_link_libraries(demo ${CORE})
 
 add_executable(scene src/main-scene.cpp ${RENDER_SOURCES} ${SHADERS})
 target_link_libraries(scene ${CORE})

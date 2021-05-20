@@ -47,8 +47,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/demo.dir/DependInfo.cmake"
-  "CMakeFiles/confetti.dir/DependInfo.cmake"
   "CMakeFiles/scene.dir/DependInfo.cmake"
   "CMakeFiles/billboard.dir/DependInfo.cmake"
   )

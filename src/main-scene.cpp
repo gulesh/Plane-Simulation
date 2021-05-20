@@ -1,5 +1,5 @@
-// Bryn Mawr College, alinen, 2020
-//
+// Basic Setup was taken from previous setup files by Alien
+// Project : Gulesh Shukla
 
 #include "AGL.h"
 #include "AGLM.h"
@@ -22,7 +22,6 @@ using namespace agl;
 
 // globals
 MyParticleSystem theSystem;
-// SkyBox box = new SkyBox(6);
 Mesh theModel;
 int theCurrentModel = 0;
 vector<string> theModelNames;
@@ -67,51 +66,6 @@ float Elevation = 0.0f;
 GLuint theVboPosId;
 GLuint theVboNormalId;
 GLuint theElementbuffer;
-GLuint theVboBackPosId;
-
-float skyboxVertices[] = {
-    // positions
-    -1.0f, 1.0f, -1.0f,
-    -1.0f, -1.0f, -1.0f,
-    1.0f, -1.0f, -1.0f,
-    1.0f, -1.0f, -1.0f,
-    1.0f, 1.0f, -1.0f,
-    -1.0f, 1.0f, -1.0f,
-
-    -1.0f, -1.0f, 1.0f,
-    -1.0f, -1.0f, -1.0f,
-    -1.0f, 1.0f, -1.0f,
-    -1.0f, 1.0f, -1.0f,
-    -1.0f, 1.0f, 1.0f,
-    -1.0f, -1.0f, 1.0f,
-
-    1.0f, -1.0f, -1.0f,
-    1.0f, -1.0f, 1.0f,
-    1.0f, 1.0f, 1.0f,
-    1.0f, 1.0f, 1.0f,
-    1.0f, 1.0f, -1.0f,
-    1.0f, -1.0f, -1.0f,
-
-    -1.0f, -1.0f, 1.0f,
-    -1.0f, 1.0f, 1.0f,
-    1.0f, 1.0f, 1.0f,
-    1.0f, 1.0f, 1.0f,
-    1.0f, -1.0f, 1.0f,
-    -1.0f, -1.0f, 1.0f,
-
-    -1.0f, 1.0f, -1.0f,
-    1.0f, 1.0f, -1.0f,
-    1.0f, 1.0f, 1.0f,
-    1.0f, 1.0f, 1.0f,
-    -1.0f, 1.0f, 1.0f,
-    -1.0f, 1.0f, -1.0f,
-
-    -1.0f, -1.0f, -1.0f,
-    -1.0f, -1.0f, 1.0f,
-    1.0f, -1.0f, -1.0f,
-    1.0f, -1.0f, -1.0f,
-    -1.0f, -1.0f, 1.0f,
-    1.0f, -1.0f, 1.0f};
 
 static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods)
 {
@@ -207,8 +161,6 @@ static void cursor_position_callback(GLFWwindow *window, double xpos, double ypo
             Azimuth = Azimuth + .01 * changeX;
             Elevation = Elevation + changeY * .01;
 
-            // cout << Azimuth << endl;
-            // cout << Elevation << endl;
         }
     }
 }
@@ -255,12 +207,6 @@ static void LoadModel(const std::string &dir)
 
     minDimentions = theModel.getMinBounds();
     maxDimentions = theModel.getMaxBounds();
-    // cout << minDimentions << "minDim" << endl;
-    // cout << maxDimentions << "minDim" << endl;
-
-    // float centerPlaneX = 0;
-    // float centerPlaneY = 0;
-    // float centerPlaneZ = 0;
 
     // //translation and scaling the model matrix
     scaleX = fabs((maxDimentions.x - minDimentions.x));
@@ -275,18 +221,12 @@ static void LoadModel(const std::string &dir)
     centerPlaneY = (maxDimentions.y + minDimentions.y) / 2;
     centerPlaneZ = (maxDimentions.z + minDimentions.z) / 2;
 
-    // cout << centerPlaneX << " centerX" << endl;
-    // cout << centerPlaneY << " centery" << endl;
-    // cout << centerPlaneZ << " centerz" << endl;
-
     // vec3 lookAt
-    glm::mat4 scaled = glm::scale(glm::mat4(1.0f), glm::vec3(1.0f / finalMax, 1.0f / finalMax, 1.0f / finalMax));
+    glm::mat4 scaled = glm::scale(glm::mat4(1.0f), glm::vec3(3.0f / finalMax, 3.0f / finalMax, 3.0f / finalMax));
     glm::mat4 translated = glm::translate(glm::mat4(1.0f), glm::vec3(-centerPlaneX, -centerPlaneY, -centerPlaneZ));
     modelMatrix = scaled * translated;
 
-    currentPlanePos = glm::vec3(((maxDimentions.x - minDimentions.x) / 2) / finalMax, ((maxDimentions.y - minDimentions.y) / 2) / finalMax, ((maxDimentions.z - minDimentions.z) / 2) / finalMax);
-    // offset = glm::vec3( (maxDimentions.x + centerPlaneX)/finalMax, (maxDimentions.y + centerPlaneY)/finalMax, (maxDimentions.z + centerPlaneZ)/finalMax);
-    // offset = glm::vec3(0, 0, (maxDimentions.x - (maxDimentions.x - minDimentions.x) / 2)/finalMax);
+    currentPlanePos = glm::vec3(((maxDimentions.x - minDimentions.x) / 2) / finalMax, ((3*maxDimentions.y - 3*minDimentions.y) / 2) / finalMax, ((maxDimentions.z - minDimentions.z) / 2) / finalMax);
     offset = glm::vec3(0, 0, 0);
 
     glBindBuffer(GL_ARRAY_BUFFER, theVboPosId);
@@ -301,12 +241,13 @@ static void LoadModel(const std::string &dir)
 
 static GLuint loadBackgroundMap()
 {
+    glEnable(GL_TEXTURE1);
     glActiveTexture(GL_TEXTURE1);
     GLuint texBackId;
     glGenTextures(1, &texBackId);
     glBindTexture(GL_TEXTURE_CUBE_MAP, texBackId);
-    vector<string> cubeFaces = {"../textures/cube/right.jpg", "../textures/cube/left.jpg", "../textures/cube/front.jpg",
-                                "../textures/cube/back.jpg", "../textures/cube/top.jpg", "../textures/cube/bottom.jpg"};
+    vector<string> cubeFaces = {"../textures/cube/right.png", "../textures/cube/left.png", "../textures/cube/front.png",
+                                "../textures/cube/back.png", "../textures/cube/top.png", "../textures/cube/bottom.png"};
 
     GLuint targets[] = {
         GL_TEXTURE_CUBE_MAP_POSITIVE_X,
@@ -320,25 +261,15 @@ static GLuint loadBackgroundMap()
     {
         Image image;
         image.load(cubeFaces[i]);
-        //   std::cout << image.data().x << std::endl;
-        std::cout << cubeFaces[i] << std::endl;
-        std::cout << " width image" << image.width() << std::endl;
-        // unsigned char *pixelData = image.data();
-        std::cout << " height data" << image.height() << std::endl;
-        std::cout << "getting pixel 100, 100" << image.get_vec3(100, 100) << std::endl;
 
         if (image.data())
         {
-            std::cout << "indise loop if clause" << targets[i] << std::endl;
             glTexImage2D(targets[i],
                          0, GL_RGBA, image.width(), image.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, image.data());
-            std::cout << "af txtImage2d loop if clause" << std::endl;
-            stbi_image_free(image.data());
         }
         else
         {
             std::cout << "Image not loaded " << cubeFaces[i] << std::endl;
-            stbi_image_free(image.data());
         }
     }
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -346,6 +277,8 @@ static GLuint loadBackgroundMap()
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+
+    cubeFaces.clear();
 
     return texBackId;
 }
@@ -452,47 +385,33 @@ int main(int argc, char **argv)
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte *)NULL);
 
     LoadModel("../model/"); //modified the loadModels function to just load one model
-
-    //setting the background
-    glDepthMask(GL_FALSE);
-    glGenBuffers(1, &theVboBackPosId);
-    glBindBuffer(GL_ARRAY_BUFFER, theVboBackPosId); // always bind before setting data
-    glBufferData(GL_ARRAY_BUFFER, 18 * sizeof(float), skyboxVertices, GL_STATIC_DRAW);
-
-    GLuint vabId;
-    glGenVertexArrays(1, &vabId);
-    glBindVertexArray(vabId);
-    glEnableVertexAttribArray(0); // 0 -> Sending VertexPositions to array #0 in the active shader
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte *)NULL);
-
+    
+    //setting up the background
+    SkyBox box(6);
     GLuint shaderBackGroundId = LoadShader("../shaders/skybox.vs", "../shaders/skybox.fs");
     glUseProgram(shaderBackGroundId);
-    // cout << shaderBackGroundId << endl;
     GLuint mvId = glGetUniformLocation(shaderBackGroundId, "uMV"); //MVP
     GLuint pvId = glGetUniformLocation(shaderBackGroundId, "uPV"); //ModelViewMatrix
-    viewMatrix = glm::lookAt(vec3(0, 0, 1), vec3(0), vec3(0, 1, 0));
-    projectionMatrix = glm::perspective(glm::radians(60.0f), (float)width / height, 0.01f, 100.0f);
+
     glUniformMatrix4fv(mvId, 1, GL_FALSE, &viewMatrix[0][0]);
     glUniformMatrix4fv(pvId, 1, GL_FALSE, &projectionMatrix[0][0]);
-    glUniform1i(glGetUniformLocation(shaderBackGroundId, "cubeBoxTex"), 1);
+    viewMatrix = glm::lookAt(vec3(0, 0, 1), vec3(0), vec3(0, 1, 0));
+    projectionMatrix = glm::perspective(glm::radians(60.0f), (float)width / height, 0.01f, 100.0f);
     GLuint textId = loadBackgroundMap();
-    // box->render(textId);
-    glBindVertexArray(vabId);
     glBindTexture(GL_TEXTURE_CUBE_MAP, textId);
-    glDrawArrays(GL_TRIANGLES, 0, 36);
+    glUniform1i(glGetUniformLocation(shaderBackGroundId, "cubeBoxTex"), 1);
     glDepthMask(GL_TRUE);
 
+
+    //setting up the plane using meshes
     GLuint shaderPlaneId = LoadShader("../shaders/phongPerFrag.vs", "../shaders/phongPerFrag.fs");
     glUseProgram(shaderPlaneId);
 
-    // GLuint shaderPlaneId = ParticleSystem::GetRenderer().loadShader("../shaders/phongPerFrag.vs", "../shaders/phongPerFrag.fs");
-
-    //Per Vertex shader
+   //shader
     GLuint mvpId = glGetUniformLocation(shaderPlaneId, "uMVP"); //MVP
     GLuint mvmId = glGetUniformLocation(shaderPlaneId, "uMV");  //ModelViewMatrix
     GLuint nmvId = glGetUniformLocation(shaderPlaneId, "uNMV"); //NormalMAtrix
 
-    //PerFragment Shader
     glUniform3f(glGetUniformLocation(shaderPlaneId, "Ks"), 0.45, 0.45, 0.45);
     glUniform3f(glGetUniformLocation(shaderPlaneId, "Kd"), 0.45, 0.45, 0.45);
     glUniform3f(glGetUniformLocation(shaderPlaneId, "Ka"), 0.1, 0.1, 0.1);
@@ -505,18 +424,17 @@ int main(int argc, char **argv)
 
     glm::vec3 lookfrom(0, 0, 1);
     viewMatrix = glm::lookAt(lookfrom, vec3(0), vec3(0, 1, 0));
-    // projectionMatrix = glm::ortho(-2.0, 2.0, -2.0, 2.0, -2.0, 2.0);
     projectionMatrix = glm::perspective(glm::radians(60.0f), (float)width / height, 0.01f, 100.0f);
     glm::mat4 mvp = projectionMatrix * viewMatrix * modelMatrix;
     glUniformMatrix4fv(mvpId, 1, GL_FALSE, &mvp[0][0]);
 
+    //the particle system setup
     GLuint shaderParticleId = theSystem.GetRenderer().returnShaderId();
     glUseProgram(shaderParticleId);
 
-    //the particle system setup
     theSystem.setoffset(offset);
     theSystem.setCurrentPlanePosition(currentPlanePos);
-    theSystem.init(300); // TODO: Set number of particles here
+    theSystem.init(500); // TODO: Set number of particles here
     float fov = radians(60.0f);
     ParticleSystem::GetRenderer().perspective(fov, (float)width / height, 0.01f, 100.0f);
     ParticleSystem::GetRenderer().lookAt(lookfrom, vec3(0, 0, 0));
@@ -526,6 +444,11 @@ int main(int argc, char **argv)
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the buffers
+        //background setup
+        glUseProgram(shaderBackGroundId);
+        box.render();
+        glUniformMatrix4fv(mvId, 1, GL_FALSE, &viewMatrix[0][0]);
+        glUniformMatrix4fv(pvId, 1, GL_FALSE, &projectionMatrix[0][0]);
 
         //update transform
         lookfrom.x = dist * sin(Azimuth) * cos(Elevation);
@@ -543,47 +466,8 @@ int main(int argc, char **argv)
 
         ParticleSystem::GetRenderer().lookAt(lookfrom, vec3(0, 0, 0));
 
-        //meshsetup
+        //mesh draw
         glUseProgram(shaderPlaneId);
-
-        // //setMVP
-        // vec3 newminDimentions = minDimentions + velocityDir * dt;
-        // float minvalueX = std::min(newminDimentions.x, minDimentions.x);
-        // float minvalueY = std::min(newminDimentions.y, minDimentions.y);
-        // float minvalueZ = std::min(newminDimentions.z, minDimentions.z);
-
-        // vec3 newmaxDimentions = maxDimentions + velocityDir * dt;
-        // float maxvalueX = std::min(newmaxDimentions.x, maxDimentions.x);
-        // float maxvalueY = std::min(newmaxDimentions.y, maxDimentions.y);
-        // float maxvalueZ = std::min(newmaxDimentions.z, maxDimentions.z);
-
-        // minDimentions = vec3(minvalueX, minvalueY, minvalueZ);
-        // maxDimentions = vec3(maxvalueX, maxvalueY, maxvalueZ);
-
-        // // cout<< newminDimentions <<endl;
-
-        // // //translation and scaling the model matrix
-        // scaleX = fabs((maxDimentions.x - minDimentions.x));
-        // scaleY = fabs((maxDimentions.y - minDimentions.y));
-        // scaleZ = fabs((maxDimentions.z - minDimentions.z));
-
-        // maxValueXY = std::max(scaleX, scaleY);
-        // maxValueXZ = std::max(scaleX, scaleZ);
-        // finalMax = std::max(maxValueXY, maxValueXZ);
-
-        // centerPlaneX = (maxDimentions.x + minDimentions.x) / 2;
-        // centerPlaneY = (maxDimentions.y + minDimentions.y) / 2;
-        // centerPlaneZ = (maxDimentions.z + minDimentions.z) / 2;
-
-        // currentPlanePos = currentPlanePos + velocityDir * dt;
-        // // cout << currentPlanePos << endl;
-
-        // vec3 lookAt =
-        // glm::mat4 scaled = glm::scale(glm::mat4(1.0f), glm::vec3(1.0f / finalMax, 1.0f / finalMax, 1.0f / finalMax));
-        // glm::mat4 translated = glm::translate(glm::mat4(1.0f), glm::vec3(-centerPlaneX, -centerPlaneY, -centerPlaneZ));
-        // glm::mat4 planeMovement = glm::translate(glm::mat4(1.0f), currentPlanePos); // set position here!
-        // modelMatrix = planeMovement * scaled * translated;
-        // // modelMatrix = scaled * translated;
 
         viewMatrix = glm::lookAt(lookfrom, vec3(0), vec3(0, 1, 0));
         mv = viewMatrix * modelMatrix;
