@@ -8,10 +8,16 @@ This is a demonstration of the contrails created by the planes in the sky.
 Open git bash to the directory containing this repository.
 
 ```
-particles $ mkdir build
-particles $ cd build
-particles/build $ cmake -G "Visual Studio 16 2019" ..
-particles/build $ start Plane_Contrails.sln
+Plane_Contrails $ mkdir build
+Plane_Contrails $ cd build
+Plane_Contrails/build $ cmake -G "Visual Studio 16 2019" ..
+Plane_Contrails/build $ start Plane_Contrails.sln
+```
+
+Your solution file should contain one project: Plane_Contrails. To run from the git bash command shell,
+
+```
+Plane_Contrails/build $ ../bin/Debug/scene
 ```
 
 *macOS*
@@ -19,10 +25,17 @@ particles/build $ start Plane_Contrails.sln
 Open terminal to the directory containing this repository.
 
 ```
-particles $ mkdir build
-particles $ cd build
-particles/build $ cmake ..
-particles/build $ make
+Plane_Contrails $ mkdir build
+Plane_Contrails $ cd build
+Plane_Contrails/build $ cmake ..
+Plane_Contrails/build $ make
+
+```
+
+To run each program from build, you would type:
+
+```
+Plane_Contrails/build $ ../bin/scene
 ```
 
 ## Results
