@@ -1,4 +1,4 @@
-project(CS312-Particles)
+project(Plane_Contrails)
 cmake_minimum_required(VERSION 2.8.11)
 
 if (WIN32) # Include win64 platforms
