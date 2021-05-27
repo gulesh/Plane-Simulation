@@ -11,7 +11,7 @@ if (WIN32) # Include win64 platforms
      external/include )
 
   set(LIBRARY_DIRS
-    lib
+    lib  
     external/lib)
 
   set(CMAKE_CXX_STANDARD 11)
