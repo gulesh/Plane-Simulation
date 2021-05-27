@@ -14,12 +14,6 @@ particles/build $ cmake -G "Visual Studio 16 2019" ..
 particles/build $ start Plane_Contrails.sln
 ```
 
-To run from the git bash command shell, 
-
-```
-particles/build $ ../bin/Debug/scene
-```
-
 *macOS*
 
 Open terminal to the directory containing this repository.
@@ -29,12 +23,6 @@ particles $ mkdir build
 particles $ cd build
 particles/build $ cmake ..
 particles/build $ make
-```
-
-To run each program from build, you would type
-
-```
-particles/build $ ../bin/scene
 ```
 
 ## Results
